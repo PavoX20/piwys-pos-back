@@ -1,0 +1,34 @@
+# --- Python General ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Entornos Virtuales (¡Muy Importante!) ---
+# Ignoramos la carpeta donde instalaste las librerías
+venv/
+.venv/
+env/
+ENV/
+
+# --- Variables de Entorno y Secretos (CRÍTICO) ---
+# Nunca subas esto, contiene tus claves de Supabase y JWT
+.env
+.env.local
+
+# --- Distribución y Empaquetado ---
+dist/
+build/
+*.egg-info/
+
+# --- Logs y Bases de Datos Locales ---
+*.log
+*.sqlite3
+
+# --- IDEs y Sistema Operativo ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Vercel ---
+.vercel/
