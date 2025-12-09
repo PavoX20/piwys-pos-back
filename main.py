@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware # <--- 1. Importar esto
 from app.core.database import engine, Base
 from app.routers import auth, products, orders, payments
 
-Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="POS System")
 
