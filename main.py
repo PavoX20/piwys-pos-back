@@ -28,3 +28,12 @@ app.include_router(payments.router)
 @app.get("/")
 def read_root():
     return {"message": "Sistema POS Estructurado y Listo 🚀"}
+
+@app.get("/config-check")
+def check_config():
+    secret = os.getenv("SECRET_KEY")
+    return {
+        "API_STATUS": "OK",
+        "SECRET_KEY_READ": "OK" if secret and len(secret) > 10 else "FAIL",
+        "SECRET_KEY_TRUNCATED": secret[:5] if secret else "NOT_FOUND" # Mostramos los primeros 5 para verificar que no esté vacío
+    }
